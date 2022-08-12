@@ -31,7 +31,8 @@ function sgma_cron_exec()
     // Post query
     $q_args = array(
         'post_type' => 'events',
-    );
+    ); 
+    
 
     $q_query = new WP_Query($q_args);
 
