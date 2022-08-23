@@ -43,7 +43,7 @@ function sgma_cron_exec()
             $expl = explode('/', $event_date);
             $new_date = $expl[0] . '-' . $expl[1] . '-' . $expl[2];
             $exp_time = strtotime($new_date) + (24*60*60);
-            if (strtotime($exp_time) +  < time()) {
+            if (strtotime($exp_time) < time()) {
                 // Set post term to post item
                 // set false to reset all terms
                 wp_set_post_terms(get_the_ID(), array(37), 'event_kategorien', true);
